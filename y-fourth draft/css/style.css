@@ -1,0 +1,166 @@
+/* Basic Styles */
+h1 {
+	font-family: 'Butler', 'Open Sans', sans-serif;
+	font-size: 5rem;
+}
+
+h2 {
+	font-family: 'ARS Marquette', sans-serif;
+	font-size: 2rem;
+}
+
+h3 {
+	font-family: 'ARS Marquette', sans-serif;
+	font-weight:bold;
+	font-size: 1.65em;
+	text-align: center;
+}
+
+p {
+	font-family: 'ARS Marquette', sans-serif;
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+
+.form-title {
+	display: inline-block;
+}
+
+.microcopy {
+	font-size: .75rem;
+	color: white;
+}
+
+body {
+	margin: 0 auto;
+}
+
+#yellow-rectangle {
+	background-color: #FFF181;
+	position: absolute;
+	top: 45vh;
+	left: 30vw;
+	height: 60vh;
+	width: 70vw;
+	z-index: -1;
+}
+
+article {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+button {
+	background-color: black;
+	box-sizing: border-box;
+	border-radius: 50%;
+	height: 1rem;
+	width: 1rem;
+	border: black solid 1px;
+	padding: 1rem;
+	margin-left: 1rem;
+}
+
+.submit {
+	background-color: yellow;
+	box-sizing: border-box;
+	height: 1rem;
+	width: 7.5rem;
+	border: black solid 1px;
+}
+
+/* Navigation Menu */
+.navigation {
+	box-sizing: border-box;
+	width: 100vw;
+	padding: 0em 14em;
+	border-bottom: solid grey 1px;
+}
+
+.menu-items {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	list-style-type: none;
+}
+
+/* Main */
+#burger {
+	background-color: rgba(255, 0, 0, 0);
+	display: flex;
+	flex-flow: column wrap;
+	align-content: flex-end;
+}
+
+.ingredient {
+	height: 100px;
+	width: 25vw;
+	margin: 0;
+	box-sizing: border-box;
+	background-repeat:no-repeat;
+	background-size: contain;
+	overflow: hidden;
+	background-position: center;
+}
+
+/* Ingredients */
+.top-bun {
+	background-image: url(../images/burger-parts/top-bun.png);
+}
+
+.bottom-bun {
+	background-image: url(../images/burger-parts/bottom-bun.png);
+}
+
+.onion {
+	background-image: url(../images/burger-parts/onion.png);
+}
+
+.bacon {
+	background-image: url(../images/burger-parts/bacon.png);
+}
+
+.cheese {
+	background-image: url(../images/burger-parts/cheese.png);
+}
+
+.beef {
+	background-image: url(../images/burger-parts/beef.png);
+}
+
+.tomato {
+	background-image: url(../images/burger-parts/tomato.png);
+}
+
+.lettuce {
+	background-image: url(../images/burger-parts/lettuce.png);
+}
+
+/* Buttons */
+#card {
+		box-sizing: border-box;
+}
+
+.ingredient-name {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row wrap;
+	justify-content:flex-start;
+	align-items: center;
+
+}
+.hidden {
+	display: none;
+}
+
+.plus {
+	color: white;
+	font-weight: bold;
+}
+
+.minus {
+	color: white;
+	font-weight: bold;
+}
