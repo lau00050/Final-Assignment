@@ -1,46 +1,106 @@
 $(document).ready(function() {
 
+	$('.onionPlus').val(1)
+	$('.baconPlus').val(2)
+	$('.cheesePlus').val(1)
+	$('.beefPlus').val(5)
+	$('.tomatoPlus').val(1)
+	$('.lettucePlus').val(1)
+
 	// using the plus/minus buttons //
 	$('.onionPlus').click(function() {
-		$('.burger-inside').append("<div class='onion ingredient'></div>").push('Onion')
+		$('.burger-inside').append("<div class='onion ingredient'></div>")
+			var amount = $('.onionPlus').val()
+			var balance = $('span').text()
+			var total = Number(amount) + Number(balance)
+			$('span').text(total)
 	})
+
 	$('.onionMinus').click(function() {
 		$('div[class="onion ingredient"]').eq(0).remove()
+		// if ($(".burger-inside:childElementCount") === >1) {
+		if ($("<div class='onion ingredient'></div>") === 0) {
+			console.log('.onion.ingredient')
+			var amount = $('.onionPlus').val()
+			var balance = $('span').text()
+			var total = Number(balance) - Number(amount)
+			$('span').text(total)
+		}
 	})
 
 	$('.baconPlus').click(function() {
 		$('.burger-inside').append("<div class='bacon ingredient'></div>")
+		var amount = $('.baconPlus').val()
+		var balance = $('span').text()
+		var total = Number(amount) + Number(balance)
+		$('span').text(total)
 	})
 	$('.baconMinus').click(function() {
 		$('div[class="bacon ingredient"]').eq(0).remove()
+		var amount = $('.baconPlus').val()
+		var balance = $('span').text()
+		var total = Number(balance) - Number(amount)
+		$('span').text(total)
 	})
 
 	$('.cheesePlus').click(function() {
 		$('.burger-inside').append("<div class='cheese ingredient'></div>")
+		var amount = $('.cheesePlus').val()
+		var balance = $('span').text()
+		var total = Number(amount) + Number(balance)
+		$('span').text(total)
 	})
 	$('.cheeseMinus').click(function() {
 		$('div[class="cheese ingredient"]').eq(0).remove()
+		var amount = $('.cheesePlus').val()
+		var balance = $('span').text()
+		var total = Number(balance) - Number(amount)
+		$('span').text(total)
 	})
 
 	$('.beefPlus').click(function() {
 		$('.burger-inside').append("<div class='beef ingredient'></div>")
+		var amount = $('.beefPlus').val()
+		var balance = $('span').text()
+		var total = Number(amount) + Number(balance)
+		$('span').text(total)
 	})
 	$('.beefMinus').click(function() {
 		$('div[class="beef ingredient"]').eq(0).remove()
+		var amount = $('.beefPlus').val()
+		var balance = $('span').text()
+		var total = Number(balance) - Number(amount)
+		$('span').text(total)
 	})
 
 	$('.tomatoPlus').click(function() {
 		$('.burger-inside').append("<div class='tomato ingredient'></div>")
+		var amount = $('.tomatoPlus').val()
+		var balance = $('span').text()
+		var total = Number(amount) + Number(balance)
+		$('span').text(total)
 	})
 	$('.tomatoMinus').click(function() {
 		$('div[class="tomato ingredient"]').eq(0).remove()
+		var amount = $('.tomatoPlus').val()
+		var balance = $('span').text()
+		var total = Number(balance) - Number(amount)
+		$('span').text(total)
 	})
 
 	$('.lettucePlus').click(function() {
 		$('.burger-inside').append("<div class='lettuce ingredient'></div>")
+		var amount = $('.lettucePlus').val()
+		var balance = $('span').text()
+		var total = Number(amount) + Number(balance)
+		$('span').text(total)
 	})
 	$('.lettuceMinus').click(function() {
 		$('div[class="lettuce ingredient"]').eq(0).remove()
+		var amount = $('.lettucePlus').val()
+		var balance = $('span').text()
+		var total = Number(balance) - Number(amount)
+		$('span').text(total)
 	})
 
 	// selecting a premade burger //
@@ -86,13 +146,3 @@ $(document).ready(function() {
 		}
 	})
 })
-
-var customerOrder = []
-
-// $('.plus').click(function()	{
-// 	var amount = $('.ingredient').val()
-// 	var balance = $('.balance span').text()
-// 	var total = Number(amount) + Number(balance)
-var balance = $('.balance span').val(0)
-console.log(balance)
-// })
