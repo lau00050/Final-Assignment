@@ -8,7 +8,7 @@ $(document).ready(function() {
 	$('.tomatoPlus').val(1)
 	$('.lettucePlus').val(1)
 
-	// Plus/minus buttons //
+	// Plus & minus buttons //
 	$('.onionPlus').click(function() {
 		$('.burger-inside').append("<div class='onion ingredient'></div>")
 			var amount = $('.onionPlus').val()
@@ -19,14 +19,10 @@ $(document).ready(function() {
 
 	$('.onionMinus').click(function() {
 		$('div[class="onion ingredient"]').eq(0).remove()
-		// if ($(".burger-inside:childElementCount") === >1) {
-		// if ($("<div class='onion ingredient'></div>") === 0) {
-			console.log('.onion.ingredient')
 			var amount = $('.onionPlus').val()
 			var balance = $('span').text()
 			var total = Number(balance) - Number(amount)
 			$('span').text(total)
-		// }
 	})
 
 	$('.baconPlus').click(function() {
