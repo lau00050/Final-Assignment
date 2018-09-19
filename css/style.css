@@ -13,7 +13,6 @@ h3 {
 	font-family: 'ARS Marquette', sans-serif;
 	font-weight:bold;
 	font-size: 1.65em;
-	text-align: center;
 }
 
 p {
@@ -33,6 +32,18 @@ p {
 
 body {
 	margin: 0 auto;
+}
+
+#success-bground {
+	background-color: #011118;
+}
+
+.success-h1 {
+	color: white;
+}
+
+.success-h3 {
+	color: #96a0a2;
 }
 
 #yellow-rectangle {

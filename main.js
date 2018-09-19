@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+	// Ingredients: assigning each with a numerical value //
 	$('.onionPlus').val(1)
 	$('.baconPlus').val(2)
 	$('.cheesePlus').val(1)
@@ -7,7 +8,7 @@ $(document).ready(function() {
 	$('.tomatoPlus').val(1)
 	$('.lettucePlus').val(1)
 
-	// using the plus/minus buttons //
+	// Plus/minus buttons //
 	$('.onionPlus').click(function() {
 		$('.burger-inside').append("<div class='onion ingredient'></div>")
 			var amount = $('.onionPlus').val()
@@ -19,13 +20,13 @@ $(document).ready(function() {
 	$('.onionMinus').click(function() {
 		$('div[class="onion ingredient"]').eq(0).remove()
 		// if ($(".burger-inside:childElementCount") === >1) {
-		if ($("<div class='onion ingredient'></div>") === 0) {
+		// if ($("<div class='onion ingredient'></div>") === 0) {
 			console.log('.onion.ingredient')
 			var amount = $('.onionPlus').val()
 			var balance = $('span').text()
 			var total = Number(balance) - Number(amount)
 			$('span').text(total)
-		}
+		// }
 	})
 
 	$('.baconPlus').click(function() {
@@ -103,15 +104,16 @@ $(document).ready(function() {
 		$('span').text(total)
 	})
 
-	// selecting a premade burger //
+	// Premade burger: Selecting an option //
 	var burgers = ['classic', 'veggie', 'bacon', 'double decker', 'cheese supreme', 'custom']
 	var $selectBox = $('#burger-type')
 
+	// Premade burgers: place into dropdown box //
 	burgers.forEach(function(burger) {
 	  $selectBox.append('<option>' + burger.toUpperCase() + '</option>')
 	})
 
-	// Our first loop — addClass, removeClass, targeting
+	// Premade burger: adding ingredients inside the burger //
 	$selectBox.change(function () {
 		$('.burger-inside').empty()
 		if ($selectBox.val() === 'classic'.toUpperCase()) {
@@ -119,21 +121,25 @@ $(document).ready(function() {
 			$('.burger-inside').append("<div class='beef ingredient'></div>")
 			$('.burger-inside').append("<div class='tomato ingredient'></div>")
 			$('.burger-inside').append("<div class='lettuce ingredient'></div>")
+			$('span').text(8)
 		} else if ($selectBox.val() === 'veggie'.toUpperCase()) {
 			$('.burger-inside').append("<div class='onion ingredient'></div>")
 			$('.burger-inside').append("<div class='tomato ingredient'></div>")
 			$('.burger-inside').append("<div class='lettuce ingredient'></div>")
+			$('span').text(6)
 		} else if ($selectBox.val() === 'bacon'.toUpperCase()) {
 			$('.burger-inside').append("<div class='bacon ingredient'></div>")
 			$('.burger-inside').append("<div class='beef ingredient'></div>")
 			$('.burger-inside').append("<div class='tomato ingredient'></div>")
 			$('.burger-inside').append("<div class='lettuce ingredient'></div>")
+			$('span').text(9)
 		} else if ($selectBox.val() === 'double decker'.toUpperCase()) {
 			$('.burger-inside').append("<div class='beef ingredient'></div>")
 			$('.burger-inside').append("<div class='beef ingredient'></div>")
 			$('.burger-inside').append("<div class='tomato ingredient'></div>")
 			$('.burger-inside').append("<div class='lettuce ingredient'></div>")
 			$('.burger-inside').append("<div class='cheese ingredient'></div>")
+			$('span').text(12)
 		} else if ($selectBox.val() === 'cheese supreme'.toUpperCase()) {
 			$('.burger-inside').append("<div class='onion ingredient'></div>")
 			$('.burger-inside').append("<div class='cheese ingredient'></div>")
@@ -141,8 +147,10 @@ $(document).ready(function() {
 			$('.burger-inside').append("<div class='tomato ingredient'></div>")
 			$('.burger-inside').append("<div class='lettuce ingredient'></div>")
 			$('.burger-inside').append("<div class='cheese ingredient'></div>")
+			$('span').text(10)
 		} else if ($selectBox.val() === 'cheese supreme'.toUpperCase()){
 			$('.burger-inside').empty()
+			$('span').text(0)
 		}
 	})
 })
